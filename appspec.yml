@@ -3,10 +3,6 @@ os: linux
 files:
   - source: /
     destination: /var/app
-hooks:
-  ApplicationStart:
-    - location: /var/app/scripts/start.sh
-      runas: ec2-user
 permissions:
   - object: ///deployment-archive/scripts/start.sh
     pattern: "*.sh"
@@ -15,3 +11,7 @@ permissions:
     mode: 755
     type:
       - file
+hooks:
+  ApplicationStart:
+    - location: /var/app/scripts/start.sh
+      runas: ec2-user
