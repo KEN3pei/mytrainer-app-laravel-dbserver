@@ -4,8 +4,8 @@ files:
   - source: /
     destination: /var/app
 permissions:
-  - object: /var/app/scripts/start.sh
-    pattern: "*.sh"
+  - object: scripts/start.sh
+    pattern: "**"
     owner: root
     group: root
     mode: 755
