@@ -5,7 +5,7 @@ files:
     destination: /var/app
 hooks:
   ApplicationStart:
-    - location: ./scripts/start.sh
+    - location: scripts/start.sh
       runas: ec2-user
 permissions:
   - object: /var/app/hooks
