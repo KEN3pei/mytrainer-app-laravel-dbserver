@@ -8,7 +8,7 @@ hooks:
     - location: /var/app/scripts/start.sh
       runas: ec2-user
 permissions:
-  - object: var/app/scripts
+  - object: ///deployment-archive/scripts/start.sh
     pattern: "*.sh"
     owner: root
     group: root
