@@ -5,7 +5,7 @@ files:
     destination: /var/app
 permissions:
   - object: scripts/start.sh
-    pattern: "**"
+    # pattern: "**"
     owner: root
     group: root
     mode: 755
