@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/app
 permissions:
-  - object: scripts/start.sh
+  - object: scripts/change_permissions.sh
     # pattern: "**"
     owner: root
     group: root
