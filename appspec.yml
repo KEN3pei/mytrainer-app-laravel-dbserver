@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/app
 permissions:
-  - object: /var/app/scripts/start.sh
+  - object: scripts/start.sh
     # pattern: "**"
     owner: root
     group: root
@@ -12,6 +12,10 @@ permissions:
     type:
       - file
 hooks:
+  AfterInstall:
+    - location: scripts/change_permissions.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
-    - location: /var/app/scripts/start.sh
+    - location: scripts/start.sh
       runas: ec2-user
