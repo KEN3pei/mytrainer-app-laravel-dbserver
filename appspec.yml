@@ -13,7 +13,7 @@ permissions:
       - file
 hooks:
   AfterInstall:
-    - location: scripts/change_permissions.sh
+    - location: /var/app/scripts/change_permissions.sh
       timeout: 300
       runas: ec2-user
   ApplicationStart:
