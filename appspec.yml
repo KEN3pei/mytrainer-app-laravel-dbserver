@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/app
 permissions:
-  - object: ///deployment-archive/scripts/start.sh
+  - object: /var/app/scripts/start.sh
     pattern: "*.sh"
     owner: root
     group: root
