@@ -7,3 +7,11 @@ hooks:
   ApplicationStart:
     - location: ./scripts/start.sh
       runas: ec2-user
+permissions:
+  - object: /var/app/hooks
+    pattern: "*.sh"
+    owner: root
+    group: root
+    mode: 755
+    type:
+      - file
