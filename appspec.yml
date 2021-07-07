@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/app
 permissions:
-  - object: scripts/start.sh
+  - object: /var/app/scripts/start.sh
     # pattern: "**"
     owner: root
     group: root
@@ -13,5 +13,5 @@ permissions:
       - file
 hooks:
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: /var/app/scripts/start.sh
       runas: ec2-user
