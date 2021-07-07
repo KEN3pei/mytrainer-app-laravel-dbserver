@@ -1,3 +1,3 @@
 #!/bin/sh
 
-chmod 777 scripts/start.sh
+chmod 777 /var/app/scripts/start.sh
