@@ -13,5 +13,5 @@ permissions:
       - file
 hooks:
   ApplicationStart:
-    - location: /var/app/scripts/start.sh
+    - location: scripts/start.sh
       runas: ec2-user
