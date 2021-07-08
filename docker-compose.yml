@@ -4,9 +4,9 @@ services:
     image: mysql:5.7
     environment:
         MYSQL_DATABASE: menuDB
-        MYSQL_USER: ${MYSQL_USER}
-        MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        MYSQL_USER: ken3pei
+        MYSQL_PASSWORD: pass
+        MYSQL_ROOT_PASSWORD: rootpass
     ports:
         - "3306:3306"
     volumes:
@@ -16,4 +16,4 @@ volumes:
 networks:
   default:
     external:
-      name: ${DOCKER_NETWORK_NAME}
+      name: ALLHOME-PROJECT-NETWORK
