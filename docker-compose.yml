@@ -2,6 +2,10 @@ version: '3'
 services:
   mysql:
     image: mysql:5.7
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.hostname == ip-172-31-43-71.ap-northeast-1.compute.internal]
     environment:
         MYSQL_DATABASE: menuDB
         MYSQL_USER: ken3pei
@@ -13,7 +17,3 @@ services:
         - mysql-data:/var/lib/mysql
 volumes:
     mysql-data:
-networks:
-  default:
-    external:
-      name: ALLHOME-PROJECT-NETWORK
